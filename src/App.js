@@ -62,18 +62,16 @@ const App = () => {
     return sortedTransactions;
   };
 
-  const renderContent = getTransactions().map((amount, index) => {
-    return (
-      <div className='transaction' key={index}>
-        <div>
-          Amount: {amount.amount.value} {amount.amount.currency_iso}
-        </div>
-        <div>Category Title : {amount.category_title}</div>
-        <div>Date : {amount.date}</div>
-        <div>Description : {amount.description}</div>
+  const renderContent = getTransactions().map((amount, index) => (
+    <div className='transaction' key={index}>
+      <div>
+        Amount: {amount.amount.value} {amount.amount.currency_iso}
       </div>
-    );
-  });
+      <div>Category Title : {amount.category_title}</div>
+      <div>Date : {amount.date}</div>
+      <div>Description : {amount.description}</div>
+    </div>
+  ));
 
   if (!loaded) {
     return <div className='loading'>Loading...</div>;
