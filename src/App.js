@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./App.css";
 import axios from "axios";
+import "./App.css";
 
 const App = () => {
   const [transactions, setTransactions] = useState([]);
